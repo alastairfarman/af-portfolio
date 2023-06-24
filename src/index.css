@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+:root {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu,
+ol,
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  /* Places underlines below the descenders */
+  text-underline-position: under;
+
+  /* Sets the thickness as a percentage of the font size */
+  text-decoration-thickness: 8;
+}
+
+/* <html> = the root */
+html {
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+}
+
+html {
+  -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+label,
+button,
+select,
+summary,
+[type="radio"],
+[type="submit"],
+[type="checkbox"] {
+  cursor: pointer;
+}
+
+/*  */
+
+:root {
+  --color-primary: #bdfc86;
+  --color-secondary: #161616;
+  --color-tertiary: #f9f9f9;
+  --color-quaternary: #0515c1;
+}
+
+.section {
+  height: 100dvh;
+  width: 100dvw;
+  padding: 10dvh 10dvw 10dvh 10dvw;
+}
+
+.section:nth-child(even) {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+.section:nth-child(odd) {
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+}
+
+#contact {
+  height: 50dvh;
+}
+
+#HUD {
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  border: solid 5px #0515c1;
+  font-family: Tanker-Regular, sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-quaternary);
+}
+
+@font-face {
+  font-family: "BespokeSerif-Light";
+  src: url("./fonts/BespokeSerif-Light.woff2") format("woff2"),
+    url("./fonts/BespokeSerif-Light.woff") format("woff"),
+    url("./fonts/BespokeSerif-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BespokeSerif-BoldItalic";
+  src: url("./fonts/BespokeSerif-BoldItalic.woff2") format("woff2"),
+    url("./fonts/BespokeSerif-BoldItalic.woff") format("woff"),
+    url("./fonts/BespokeSerif-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tanker-Regular";
+  src: url("./fonts/Tanker-Regular.otf") format("opentype");
+}
+
+h1 {
+  font-family: "BespokeSerif-BoldItalic", serif;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h2 {
+  font-family: "BespokeSerif-BoldItalic", serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h3 {
+  font-family: "BespokeSerif-BoldItalic", serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  font-family: "BespokeSerif-Light", serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+}
